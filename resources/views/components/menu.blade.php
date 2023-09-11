@@ -2,12 +2,13 @@
 
 <a class="btn btn-primary w-100 mb-2" href="{{ route('home') }}">Home</a>
 
-<a class="btn btn-primary w-100 mb-2">My Order</a>
+<a class="btn btn-primary w-100 mb-2" href="{{ route('myorder') }}">My Order</a>
 
 <a class="btn btn-primary w-100 mb-2" href="{{ route('profile') }}">Profile</a>
 
 @if($user->role == 'admin')
-	<a class="btn btn-info w-100 mb-2">Manage Orders</a>
+	<a class="btn btn-info w-100 mb-2" href="{{ route('admin.dashboard') }}">Admin Dashboard</a>
+	<a class="btn btn-info w-100 mb-2" href="{{ route('order.index') }}">Manage Orders</a>
 	<a class="btn btn-info w-100 mb-2" href="{{ route('product.index') }}">Manage Products</a>
 	<a class="btn btn-info w-100 mb-2">Manage Users</a>
 @endif
